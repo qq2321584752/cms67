@@ -12,6 +12,9 @@ import search from '../components/search.vue'
 import Newslist from '../components/Newslist.vue'
 // 引入新闻详情页
 import Newsinfo from '../components/Newsinfo.vue'
+import description from '../components/pic/description.vue'
+import picList from '../components/pic/picList.vue'
+import '../assets/css/Global.css'
 
 Vue.use(Router)
 
@@ -24,7 +27,9 @@ export default new Router({
     { path: '/shopcar', component: shopcar },
     { path: '/search', component: search },
     { path: '/home/newslist', component: Newslist },
-    { path: '/home/newsinfo/:id', component: Newsinfo }
+    { path: '/home/newsinfo/:id', component: Newsinfo },
+    { path: '/home/photolist', component: picList },
+    { path: '/description/:id', component: description }
   ],
   // 点击 那个 to 哪里 哪里就添加一个类名聚焦类名
   linkActiveClass: 'mui-active'

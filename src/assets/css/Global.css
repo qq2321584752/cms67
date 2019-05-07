@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  font-family: ''Helvetica Neue', Helvetica, sans-serif';
+  font-size: 15px;
+}
+
+img {
+  width: 100%;
+}
+
+.myCard {
+  padding: 0 10px;
+}
