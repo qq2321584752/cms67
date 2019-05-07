@@ -10,6 +10,9 @@ import shopcar from '../components/shopcar.vue'
 import search from '../components/search.vue'
 // 引入新闻列表页
 import Newslist from '../components/Newslist.vue'
+// 引入新闻详情页
+import Newsinfo from '../components/Newsinfo.vue'
+
 Vue.use(Router)
 
 export default new Router({
@@ -20,7 +23,8 @@ export default new Router({
     { path: '/member', component: member },
     { path: '/shopcar', component: shopcar },
     { path: '/search', component: search },
-    { path: '/home/newslist', component: Newslist }
+    { path: '/home/newslist', component: Newslist },
+    { path: '/home/newsinfo/:id', component: Newsinfo }
   ],
   // 点击 那个 to 哪里 哪里就添加一个类名聚焦类名
   linkActiveClass: 'mui-active'

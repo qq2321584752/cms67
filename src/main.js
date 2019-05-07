@@ -15,6 +15,14 @@ import './lib/fonts/mui.ttf'
 
 // 引入 配置 axios
 import axios from 'axios'
+
+// 引入Moment模块
+import moment from 'moment'
+
+// 定义全局的时间过滤器
+Vue.filter('dateFormat', a => {
+  return moment(a).format('YYYY-MM-DD HH:mm:ss')
+})
 axios.defaults.baseURL = 'http://www.liulongbin.top:3005'
 Vue.prototype.$http = axios
 /* eslint-disable no-new */
