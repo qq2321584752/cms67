@@ -4,6 +4,8 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import MintUI from 'mint-ui'
+import moment from 'moment'
+// Vue.use(moment)
 // Vue.http.options.root = 'http://www.liulongbin.top:3005'
 Vue.config.productionTip = false
 Vue.use(MintUI)
