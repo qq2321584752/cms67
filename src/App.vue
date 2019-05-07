@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <!-- <img src="./assets/logo.png"> -->
-    <mt-header fixed title="固定在顶部"></mt-header>
+    <mt-header fixed title="黑马程序员·Vue的项目"></mt-header>
+
     <nav class="mui-bar mui-bar-tab">
       <routerLink class="mui-tab-item" to="home">
         <span class="mui-icon mui-icon-home"></span>

@@ -1,27 +1,51 @@
 <template>
   <div>
-    <mt-header fixed title="固定在顶部"></mt-header>
-    <nav class="mui-bar mui-bar-tab">
-      <routerLink class="mui-tab-item mui-active" to="home">
-        <span class="mui-icon mui-icon-home"></span>
-        <span class="mui-tab-label">首页</span>
-      </routerLink>
-      <routerLink class="mui-tab-item" to="member">
-        <span class="mui-icon mui-icon-contact"></span>
-        <span class="mui-tab-label">会员</span>
-      </routerLink>
-      <routerLink class="mui-tab-item" to="shopcar">
-        <span class="mui-icon mui-icon-extra mui-icon-extra-cart">
-          <span class="mui-badge">9</span>
-        </span>
-
-        <span class="mui-tab-label">购物车</span>
-      </routerLink>
-      <routerLink class="mui-tab-item" to="search">
-        <span class="mui-icon mui-icon-search"></span>
-        <span class="mui-tab-label">搜索</span>
-      </routerLink>
-    </nav>
+    <div id="slider" class="mui-slider">
+      <div class="mui-slider-group mui-slider-loop">
+        <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+        <div class="mui-slider-item mui-slider-item-duplicate">
+          <a href="#">
+            <img src="../assets/logo.png">
+          </a>
+        </div>
+        <!-- 第一张 -->
+        <div class="mui-slider-item">
+          <a href="#">
+            <img src="../assets/logo.png">
+          </a>
+        </div>
+        <!-- 第二张 -->
+        <div class="mui-slider-item">
+          <a href="#">
+            <img src="../assets/logo.png">
+          </a>
+        </div>
+        <!-- 第三张 -->
+        <div class="mui-slider-item">
+          <a href="#">
+            <img src="../assets/logo.png">
+          </a>
+        </div>
+        <!-- 第四张 -->
+        <div class="mui-slider-item">
+          <a href="#">
+            <img src="../assets/logo.png">
+          </a>
+        </div>
+        <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+        <div class="mui-slider-item mui-slider-item-duplicate">
+          <a href="#">
+            <img src="../assets/logo.png">
+          </a>
+        </div>
+      </div>
+      <div class="mui-slider-indicator">
+        <div class="mui-indicator mui-active"></div>
+        <div class="mui-indicator"></div>
+        <div class="mui-indicator"></div>
+        <div class="mui-indicator"></div>
+      </div>
+    </div>
   </div>
 </template>
 
