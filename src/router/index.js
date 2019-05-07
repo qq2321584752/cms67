@@ -26,7 +26,7 @@ export default new Router({
 
 
     { path: '/member', component: member },
-    { path: '/shopcar', component: shopcar },
+    { path: '/shopcar/:id/:num', component: shopcar },
     { path: '/search', component: search },
   ],
   // 点击 那个 to 哪里 哪里就添加一个类名聚焦类名

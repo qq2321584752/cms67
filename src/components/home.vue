@@ -49,7 +49,7 @@
   </div>
 </template>
 
-<script>
+<script scoped>
 // import "./lib/js/mui.js";
 
 export default {
@@ -65,7 +65,7 @@ export default {
     async get_sw_list() {
       const { data: dt } = await this.$http.get('/api/getlunbo')
       this.sw_list = dt.message
-      console.log(dt)
+      // console.log(dt)
     }
   }
 }

@@ -33,7 +33,7 @@
 
             <div class="btn_box">
               <mt-button size="small" type="primary">立即购买</mt-button>
-              <mt-button size="small" type="danger">加入购物车</mt-button>
+              <mt-button size="small" @click="get_shop_car" type="danger">加入购物车</mt-button>
             </div>
           </div>
         </div>
@@ -61,6 +61,7 @@
 </template>
 
 <script>
+import car from './car.js'
 export default {
   created() {
     this.get_goods_detail_id()
@@ -71,7 +72,9 @@ export default {
       goods_detail_id: 0,
       goods_detail: [],
       //   总商品数量
-      goods_num: 1
+      goods_num: 1,
+      //   发送到购物车的数据
+      shop_from: []
     }
   },
   filters: {
@@ -81,6 +84,13 @@ export default {
     }
   },
   methods: {
+    get_shop_car() {
+      //   this.shop_from.push({ goods_num: this.goods_num })
+      //   car.$emit('jiezhi', this.shop_from)
+      //   console.log(this.shop_from)
+
+      this.$router.push(`/shopcar/${this.goods_detail_id}/${this.goods_num}`)
+    },
     // 拿到 那边 数据传来的 详情id值
     get_goods_detail_id() {
       this.goods_detail_id = this.$router.history.current.params.id - 0
@@ -93,6 +103,7 @@ export default {
         `/api/goods/getinfo/${this.goods_detail_id}`
       )
       this.goods_detail = dt.message
+      this.shop_from = dt.message
       //   console.log(dt)
     },
     // 加 数量 按钮
@@ -114,7 +125,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .mui-ba {
   margin-bottom: 70px;
 }

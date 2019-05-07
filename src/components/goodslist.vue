@@ -45,7 +45,7 @@ export default {
         '/api/getgoods?pageindex=' + this.pagnum
       )
       this.goods_list = dt.message
-      console.log(this.goods_list)
+      // console.log(this.goods_list)
     },
     // 点击加载更多之后发送再次ajax ， 拿第二页的数据 然后把 新获得的数据
     // 循环 添加push 到老数据 数组里边 ， item 就是每一项
@@ -68,7 +68,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .mint-button {
   width: 100%;
   margin: 0 5px;

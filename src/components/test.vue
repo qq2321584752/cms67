@@ -54,10 +54,10 @@ export default {
   data() {
     return {
       selected: []
-    };
+    }
   }
-};
+}
 </script>
 
-<style>
+<style scoped>
 </style>
