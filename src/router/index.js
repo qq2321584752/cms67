@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+// import HelloWorld from '@/components/HelloWorld'
 
 // import test from '../components/test.vue'
 import app from '../App.vue'
@@ -8,6 +8,8 @@ import home from '../components/home.vue'
 import member from '../components/member.vue'
 import shopcar from '../components/shopcar.vue'
 import search from '../components/search.vue'
+// 引入新闻列表页
+import Newslist from '../components/Newslist.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -18,6 +20,7 @@ export default new Router({
     { path: '/member', component: member },
     { path: '/shopcar', component: shopcar },
     { path: '/search', component: search },
+    { path: '/home/newslist', component: Newslist }
   ],
   // 点击 那个 to 哪里 哪里就添加一个类名聚焦类名
   linkActiveClass: 'mui-active'

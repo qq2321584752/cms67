@@ -10,6 +10,11 @@ import 'mint-ui/lib/style.css'
 import './lib/css/mui.min.css'
 import './lib/css/icons-extra.css'
 import './lib/fonts/mui.ttf'
+
+// 引入 配置 axios
+import axios from 'axios'
+axios.defaults.baseURL = 'http://www.liulongbin.top:3005'
+Vue.prototype.$http = axios
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
