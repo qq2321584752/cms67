@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import HelloWorld from '@/components/HelloWorld'
 
 // import test from '../components/test.vue'
 import app from '../App.vue'
@@ -13,6 +12,10 @@ import Newslist from '../components/Newslist.vue'
 // 引入新闻详情页
 import Newsinfo from '../components/Newsinfo.vue'
 
+import goodslist from '../components/goodslist.vue'
+import goodsinfo from '../components/goodsinfo.vue'
+import goodsdesc from '../components/goodsdesc.vue'
+import goodscomment from '../components/goodscomment.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -20,8 +23,15 @@ export default new Router({
     // 配置 4个 主页面 路由 主页默认定向到 home 子组件路由
     { path: '/', component: app, redirect: '/home' },
     { path: '/home', component: home },
+    { path: '/home/goodslist', component: goodslist },
+    { path: '/home/goodsinfo/:id', component: goodsinfo },
+    { path: '/home/goodsdesc/:id', component: goodsdesc },
+    { path: '/home/goodscomment/:id', component: goodscomment },
+
+
+
     { path: '/member', component: member },
-    { path: '/shopcar', component: shopcar },
+    { path: '/shopcar/:id/:num', component: shopcar },
     { path: '/search', component: search },
     { path: '/home/newslist', component: Newslist },
     { path: '/home/newsinfo/:id', component: Newsinfo }
